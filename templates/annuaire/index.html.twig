@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AnnuaireController!{% endblock %}
+
+{% block body %}
+<div class="container m-4">
+    <h1>Annuaire</h1>
+    <p>Bienvenue dans l'annuaire !</p>
+    {% for contact in contacts %}
+    <div class="card shadow p-4 m-2">
+        <div class="body">
+            <h5 class="card-title">
+                {{ contact.prenom }} {{ contact.nom }}
+            </h5>
+            <p class="card-text">
+                <strong>Téléphone:</strong> {{ contact.telephone }}<br>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
